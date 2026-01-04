@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 420px;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 5px;
+    }
+
+    .date {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e63956;
+    }
+
+    .love {
+      position: absolute;
+      font-size: 20px;
+      animation: float 4s linear infinite;
+      color: #ff4d6d;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes float {
+      from { transform: translateY(100vh); opacity: 1; }
+      to { transform: translateY(-10vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>🎉 Happy Birthday, Sayang 🎂</h1>
+    <div class="date">5 Januari</div>
+
+    <p>
+      Di tanggal 5 Januari ini,  
+      aku cuma mau bilang satu hal sederhana  
+      tapi paling jujur dari hati.
+    </p>
+    <p>
+      Terima kasih sudah hadir di hidup aku,  
+      jadi alasan senyum, jadi rumah paling nyaman.
+    </p>
+    <p>
+      Semoga di usia yang bertambah ini,  
+      kamu selalu sehat, bahagia,  
+      dan semua mimpi kamu pelan-pelan jadi nyata 🤍
+    </p>
+
+    <button onclick="showLove()">Klik ini 💕</button>
+  </div>
+
+  <script>
+    function showLove() {
+      for (let i = 0; i < 30; i++) {
+        const love = document.createElement("div");
+        love.className = "love";
+        love.innerHTML = "❤️";
+        love.style.left = Math.random() * 100 + "vw";
+        love.style.animationDuration = (Math.random() * 2 + 3) + "s";
+        document.body.appendChild(love);
+
+        setTimeout(() => {
+          love.remove();
+        }, 4000);
+      }
+    }
+  </script>
+
+</body>
+</html>
