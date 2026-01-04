@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Love System</title>
+<style>
+body {
+  background: #0d0d0d;
+  color: #00ffcc;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.box {
+  max-width: 400px;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #00ffcc;
+  border: none;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+</style>
+</head>
+<body>
+<div class="box">
+  <p>Initializing system...</p>
+  <p>Checking power supply...</p>
+  <p><b>Source detected: YOU ❤️</b></p>
+
+  <button onclick="showLove()">Turn ON Love Mode</button>
+
+  <p id="love" class="hidden">
+    Selamat ulang tahun sayanggg 💕<br><br>
+    Kamu adalah sumber tegangan di hidupku.<br>
+    Tanpa kamu, rangkaianku mati.<br><br>
+    Love status: ∞
+  </p>
+</div>
+
+<script>
+function showLove() {
+  document.getElementById("love").classList.remove("hidden");
+}
+</script>
+</body>
+</html>
